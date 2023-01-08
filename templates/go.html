@@ -1,0 +1,22 @@
+{% extends "master.html" %}
+{% block title %}Results{% endblock %}
+
+{% block message %}
+<hr/>
+<h4 class="text-center">sentence</h4>
+<p class="text-center"><i>{{query}}</i></p>
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center">Result</h1>
+<ul class="list-group">
+    {% if classification_result == "normal" %}
+    <li class="list-group-item list-group-item-info text-center"><h4>It is a normal sentence</h4></li>
+    {% else %}
+    <li class="list-group-item list-group-item-warning text-center"><h4>It is a sarcastic sentence!</h4></li>
+    {% endif %}
+
+</ul>
+</div>
+
+{% endblock %}
